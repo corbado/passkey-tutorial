@@ -1,6 +1,6 @@
-# Passkeys Tutorial Using Node.js (Express) in TypeScript, Vanilla HTML & JS, MySQL and SimpleWebAuthn
+# Passkeys Tutorial: Node.js (Express), Vanilla JavaScript, MySQL & SimpleWebAuthn
 
-## Introdution
+## Introduction
 
 Learn to build a secure and user-friendly passkey-based web application. 
 This tutorial showcases how to implement passkeys in a simple web app, thus offering a more secure alternative to traditional passwords. 
