@@ -1,4 +1,4 @@
-# Passkeys Tutorial: Node.js (Express), Vanilla JavaScript, MySQL & SimpleWebAuthn
+# Passkey Tutorial: Node.js (Express), JavaScript, MySQL & SimpleWebAuthn
 
 ## Introduction
 
