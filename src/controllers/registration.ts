@@ -68,12 +68,15 @@ export const handleRegisterFinish = async (req: Request, res: Response, next: Ne
 
         if (verification.verified && verification.registrationInfo) {
             const {credentialPublicKey, credentialID, counter} = verification.registrationInfo;
+
+            const transportsString = JSON.stringify(body.response.transports)
+
             await credentialService.saveNewCredential(
                 loggedInUserId,
                 uint8ArrayToBase64(credentialID),
                 uint8ArrayToBase64(credentialPublicKey),
                 counter,
-                body.response.transports);
+                transportsString);
             res.send({verified: true});
         } else {
             next(new CustomError('Verification failed', 400));
