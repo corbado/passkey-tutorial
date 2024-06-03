@@ -2,9 +2,7 @@
 
 ## Introduction
 
-Learn to build a secure and user-friendly passkey-based web application. 
-This tutorial showcases how to implement passkeys in a simple web app, thus offering a more secure alternative to traditional passwords. 
-You'll learn aobut the the technicalities of setting up passkey authentication end-to-end without relying on third-party passkey providers.
+Welcome to repositiory of the [Passkey Tutorial](https://www.corbado.com/blog/passkey-tutorial-how-to-implement-passkeys)! This [tutorial](https://www.corbado.com/blog/passkey-tutorial-how-to-implement-passkeys) showcases how to implement passkeys in a simple web app, thus offering a more secure alternative to traditional passwords. By the end of this tutorial, you will have implemented an end-to-end passkey authentication system without relying on third-party passkey authentication providers.
 
 ## Tools and Technologies Used
 
@@ -22,7 +20,7 @@ You'll learn aobut the the technicalities of setting up passkey authentication e
 
 ### Step 1: Clone the Repository
 
-Clone this repository to your local machine by running:
+Clone the repository to your local machine:
 
 ```sh
 git clone https://github.com/corbado/passkeys-tutorial
@@ -31,8 +29,13 @@ git clone https://github.com/corbado/passkeys-tutorial
 
 ### Step 2: Run the Project
 
-Use the following command to run the project in a docker container:
+Start the project using Docker:
 
 ```sh
 docker compose up -d
 ```
+
+## License
+
+This project is licensed under the MIT License.
+
