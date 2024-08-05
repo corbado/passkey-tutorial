@@ -15,9 +15,9 @@ export const credentialService = {
         }
     },
 
-    async getCredentialByCredentialId(credentialId: string): Promise<AuthenticatorDevice | null> {
+    async getCredentialByCredentialId(credentialId: string, userId: string): Promise<AuthenticatorDevice | null> {
         try {
-            const [rows] = await promisePool.query('SELECT * FROM credentials WHERE credential_id = ? LIMIT 1', [credentialId]);
+            const [rows] = await promisePool.query( "SELECT * FROM credentials WHERE credential_id = ? AND user_id = ? LIMIT 1", [credentialId, userId] )
             // @ts-ignore
             if (rows.length === 0) return null;
             // @ts-ignore

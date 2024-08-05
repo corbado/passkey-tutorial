@@ -40,7 +40,6 @@ export const handleLoginFinish = async (req: Request, res: Response, next: NextF
     const {body} = req;
     const {currentChallenge, loggedInUserId} = req.session;
 
-
     if (!loggedInUserId) {
         return next(new CustomError('User ID is missing', 400));
     }
@@ -53,7 +52,7 @@ export const handleLoginFinish = async (req: Request, res: Response, next: NextF
 
         const credentialID = isoBase64URL.toBase64(body.rawId);
         const bodyCredIDBuffer = isoBase64URL.toBuffer(body.rawId);
-        const dbCredential : AuthenticatorDevice | null = await credentialService.getCredentialByCredentialId(credentialID);
+        const dbCredential : AuthenticatorDevice | null = await credentialService.getCredentialByCredentialId(credentialID, loggedInUserId);
         if (!dbCredential) {
             return next(new CustomError('Credential not registered with this site', 404));
         }
