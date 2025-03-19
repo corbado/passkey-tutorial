@@ -25,3 +25,6 @@ services:
       - SESSION_SECRET=secret123
     depends_on:
       - db
+    volumes:
+      - ./:/usr/src/app # <-- added this to mount the app directory to detect changes (hot reload)
+      - /usr/src/app/node_modules # <-- added this to avoid overriding container's node_modules
